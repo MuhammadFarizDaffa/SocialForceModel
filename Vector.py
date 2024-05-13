@@ -27,7 +27,7 @@ def main():
     rospy.Subscriber('Statis', Point, statis_callback)
     rospy.Subscriber('Resultant', Point, resultant_callback)
 
-    arrow_origin = (320, 240)  # Posisi tengah gambar sebagai titik awal panah
+    arrow_origin = (320, 240)  
 
     rate = rospy.Rate(10)  # Frekuensi loop ROS (Hz)
 
@@ -54,7 +54,7 @@ def main():
         cv2.putText(image, 'Statis', ends, cv2.FONT_HERSHEY_SIMPLEX, 1, color_s, 2)
         cv2.putText(image, 'Resultant', endr, cv2.FONT_HERSHEY_SIMPLEX, 1, color_r, 2)
 
-        cv2.imshow('Vector Direction', image)  # Menampilkan gambar dengan panah
+        cv2.imshow('Vector Direction', image) 
         cv2.waitKey(1)  # Tunggu 1 ms untuk menampilkan gambar
 
         rate.sleep()
